@@ -15,10 +15,6 @@ $(document).ready(function () {
 	});
 
 	//FUNCTIONS FOR THE CONTEXTMENU OPTIONS
-	//TO HIDE A TIMELINE
-	$('#hideRow').click(function () {
-		$(targetRow).hide();
-	});
 	//TO TOGGLE (SHOW or HIDE) THE SUB-TIMELINES OF A TIMELINE IF AVAILABLE
 	$('#hideSub').click(function () {
 		var valueInput = $(targetRow).attr("value");
