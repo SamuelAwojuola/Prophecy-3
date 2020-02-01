@@ -1,0 +1,302 @@
+body {
+	/*	position: relative;*/
+	z-index: -2;
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+	background-color: beige;
+	/*	background-color: bisque;	*/
+	overflow: hidden;
+}
+
+#guideheadings > h4:not(:first-child) {
+	display: none;
+}
+
+#tablemenuDIV {
+	position: relative;
+	z-index: -1;
+	display: none;
+	border-bottom: 2px solid grey;
+	margin-left: -10px;
+	margin-right: -10px;
+	background-color: rgba(245, 245, 220, 0.97);
+}
+
+#tablemenuDIV > ol {
+	margin: 8px;
+	list-style-type: none;
+	padding-left: 3px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+#tablemenuDIV > ol > li {
+	margin-right: 20px
+}
+
+.timelineTableContainer {
+	/*this is dependent on the script to make it visible*/
+	display: none;
+
+
+	/*	border: 1px solid black;*/
+
+	width: auto;
+
+	max-height: 90vh;
+	overflow: auto;
+	/*	width: 100%;*/
+
+}
+
+.timelineTable {
+	/*	width: 100%;*/
+	min-height: 70vh;
+	height: 50px;
+	margin-bottom: 0;
+
+}
+
+.timelineTable tbody tr:not(:first-child) {
+	display: none;
+}
+
+.timelineTable tbody tr:first-child {
+	border-top: 5px solid;
+	border-bottom: 5px solid;
+}
+
+.timelineTable tbody tr:last-child {
+	border-bottom: 5px solid;
+}
+
+th {
+	font-size: 15px;
+}
+
+.format,
+a {
+	color: #480000;
+	font-size: 0.8em;
+	/*	font-size: 12px;*/
+}
+
+.tdsubhead {
+	border-top: 3px solid;
+}
+
+tr:first-child,
+th {
+	background-color: #ddc474;
+}
+
+tr:first-child {
+	position: sticky;
+	top: 0;
+}
+
+tr:nth-child(even) {
+	background-color: #fffb9f;
+}
+
+tr {
+	background-color: beige
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	empty-cells: hide;
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+table,
+td,
+th {
+	border: 1px solid #ddd;
+	text-align: left;
+}
+
+th,
+td {
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+	/*	border-right: 2px solid black;*/
+	/*	border-left: 2px solid black;*/
+	min-width: 50px;
+	text-align: center;
+}
+
+tr td:first-child,
+tr th:first-child {
+	width: 61px;
+	background-color: ;
+	text-align: center;
+	font-style: italic;
+	text-align: right;
+}
+
+tr td:first-child:hover,
+tr th:first-child:hover {
+	/*	background-color: lemonchiffon;*/
+}
+
+tr th:first-child {
+	width: 5px;
+}
+
+tr td:last-child,
+tr th:last-child {
+	border-right: 5px solid #645252;
+}
+
+tr {
+	/*    height: 50px;*/
+	font-size: 15px;
+}
+
+tr:hover {
+	/*	background-color: #ffffff;*/
+}
+
+th:hover,
+td:hover {
+	background-color: rgb(255, 255, 255);
+	color: #862a2a;
+	border-right: black;
+	border-left: black;
+	/*
+	-webkit-transition: background-color 1s ease;
+	-moz-transition: background-color 1s ease;
+	-o-transition: background-color 1s ease;
+	transition: background-color 1s ease;
+*/
+}
+
+td:empty {
+	background-color: black;
+}
+
+
+.highlight {
+	background-color: yellow;
+}
+
+.bold {
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 15px;
+}
+
+#eventcounter {
+	float: right;
+	text-align: center;
+	display: none;
+	font-size: 20px;
+	margin: -4px 25px -4px 25px;
+}
+
+.colhighlight {
+	background-color: rgba(255, 255, 255, 0.58);
+}
+
+#details {
+	position: sticky;
+	bottom: 0;
+	padding-top: 10px;
+	background-color: beige;
+	border-top: 2px solid;
+	max-height: 300px;
+	overflow: auto;
+}
+
+/*for ANDROID phones*/
+@media only screen and (max-device-width : 768px) {
+
+	body {
+		text-align: center;
+		background-color: beige;
+		padding-bottom: 50px;
+	}
+
+	.timelineTableContainer {
+		height: 100vh;
+	}
+
+	th {
+		font-size: 30px;
+	}
+
+	td {
+		max-height: 100vh;
+		min-height: 50vh;
+	}
+
+	tr td:first-child,
+	tr th:first-child {
+		width: 170px;
+	}
+
+	.timelineTable,
+	table,
+	tr,
+	td {
+		font-size: 25.5px;
+	}
+
+	a {
+		color: #480000;
+		/*    font-size: .9em;*/
+		/*		font-size: 27px;*/
+	}
+
+	tr th:first-child {
+		font-size: 25px;
+	}
+
+	#eventcounter {
+		font-size: 50px;
+		margin: -5px;
+	}
+
+	#details {
+		max-height: 1200px;
+		padding-bottom: 50px;
+	}
+}
+
+/*for IPAD*/
+@media only screen and (max-device-width : 1024px) {
+
+	body {
+		/*				font-size: 35px;*/
+		text-align: center;
+		background-color: beige;
+	}
+
+	.timelineTable,
+	table,
+	tr,
+	td {
+		font-size: 40px;
+	}
+
+	th,
+	td {
+		/*		font-size: 35px;*/
+		max-height: 100px;
+	}
+
+	a {
+		color: #480000;
+		/*    font-size: .9em;*/
+		/*		font-size: 27px;*/
+	}
+
+	tr th:first-child {
+		font-size: 25px;
+	}
+
+}
